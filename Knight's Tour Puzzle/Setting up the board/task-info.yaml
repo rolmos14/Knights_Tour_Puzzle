@@ -122,6 +122,9 @@ files:
   text: |
     # Write your code here
   learner_created: false
-feedback_link: https://hyperskill.org/projects/141/stages/746/implement#comment
-status: Unchecked
+feedback_link: https://hyperskill.org/learn/step/11568#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sat, 25 Dec 2021 12:12:59 UTC
 record: -1
