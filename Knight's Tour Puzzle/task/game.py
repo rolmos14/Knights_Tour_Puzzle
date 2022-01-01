@@ -44,7 +44,18 @@ class KnightsTourPuzzle:
             target_y = self.start_pos_y - 1 + y
             # Update cell only if it's inside valid dimensions
             if target_x in range(0, self.columns) and target_y in range(0, self.rows):
-                self.board[target_y][target_x] = "O"
+                self.board[target_y][target_x] = str(self.count_valid_moves(target_x, target_y))
+
+    def count_valid_moves(self, pos_x, pos_y):
+        moves = 0
+        for x, y in self.valid_moves:
+            target_x = pos_x + x
+            target_y = pos_y + y
+            # Count target only if it's inside valid dimensions and cell has not been visited yet
+            if target_x in range(0, self.columns) and target_y in range(0, self.rows) and \
+               self.board[target_y][target_x] == "_":
+                moves += 1
+        return moves
 
     def __str__(self):
         total_cells = self.columns * self.rows
